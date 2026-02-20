@@ -877,6 +877,7 @@ staleness_days = (date.today() - data_through).days
 # DASH APP + STYLE
 # =========================
 app = Dash(__name__, external_stylesheets=[dbc.themes.LUX])
+server = app.server
 app.title = "ICU Bed Utilization – Decision Support"
 
 app.index_string = """
@@ -1834,3 +1835,4 @@ if __name__ == "__main__":
 
     Timer(1.0, open_browser).start()
     app.run(debug=False, port=8050)
+
